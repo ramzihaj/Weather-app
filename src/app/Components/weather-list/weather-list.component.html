@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Weather List</h2>
+
+    <ul class="list-group">
+       @for(cityWeather of weatherList; track cityWeather.id )
+
+       {
+            <button class="list-group-item btn btn-block btn-success" 
+            (click)="navigateToWeather(cityWeather.temperture)">
+              {{cityWeather.city}} : {{cityWeather.temperture}} 
+            </button>
+       } 
+
+    </ul>
+
+</div>
